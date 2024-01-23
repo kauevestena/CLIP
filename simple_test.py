@@ -5,8 +5,8 @@ from PIL import Image
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model, preprocess = clip.load("ViT-B/32", device=device)
 
-image = preprocess(Image.open("../data/1.png")).unsqueeze(0).to(device)
-text = clip.tokenize(['road','asphalt','earth','soil','sand','soul','water','sett','grass']).to(device)
+image = preprocess(Image.open("CLIP.png")).unsqueeze(0).to(device)
+text = clip.tokenize(['chart','image','cat','dog','anything','void','nothing']).to(device)
 
 with torch.no_grad():
     image_features = model.encode_image(image)
