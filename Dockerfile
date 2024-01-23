@@ -17,4 +17,4 @@ RUN git clone https://github.com/kauevestena/CLIP.git
 
 WORKDIR /workspace/CLIP
 
-RUN python CLIP/simple_test.py
+RUN python simple_test.py
